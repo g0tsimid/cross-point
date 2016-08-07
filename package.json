@@ -2,7 +2,8 @@
   "name": "cross-point-pres",
   "private": true,
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/g0tsimid/cross-point.git"
   },
   "version": "0.0.0",
   "description": "Compose articles with an emphasis on presentation aids.",

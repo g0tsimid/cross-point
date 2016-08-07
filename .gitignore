@@ -218,3 +218,4 @@ pip-log.txt
 #node
 node_modules/
 typings/
+npm-debug.log.*
