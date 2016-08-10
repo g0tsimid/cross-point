@@ -1,8 +1,8 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home';
 import { PresentationEditorComponent } from './presentation';
 
-const routes: RouterConfig = [
+const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
@@ -14,6 +14,4 @@ const routes: RouterConfig = [
   }
 ];
 
-export const appRouterProviders = [
-  provideRouter(routes)
-]
+export const routing = RouterModule.forRoot(appRoutes);
