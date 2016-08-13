@@ -23,9 +23,6 @@ import { MarkdownPipe, NavComponent } from './shared'
     PresentationEditorComponent,
     SectionEditorComponent
   ],
-  providers: [
-    MarkdownPipe
-  ],
   bootstrap: [
     AppComponent
   ]
