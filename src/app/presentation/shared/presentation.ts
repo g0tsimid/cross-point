@@ -10,8 +10,8 @@ export class Presentation {
     this.sections = [];
   }
   presentationID : number
-  name: string
-  tagline: string
+  name: string = ""
+  tagline: string = ""
   sections: PresentationSection[]
 
   /**

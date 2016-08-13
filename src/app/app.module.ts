@@ -6,24 +6,28 @@ import { AppComponent }   from './app.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home';
 import { PresentationEditorComponent, SectionEditorComponent } from './presentation';
-import { NavComponent } from './shared'
+import { MarkdownPipe, NavComponent } from './shared'
 
 
 @NgModule({
-    imports:      [
-      BrowserModule,
-      FormsModule,
-      routing
-    ],
-    declarations: [
-      AppComponent,
-      HomeComponent,
-      NavComponent,
-      PresentationEditorComponent,
-      SectionEditorComponent
-    ],
-    bootstrap: [
-      AppComponent
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    routing
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    MarkdownPipe,
+    NavComponent,
+    PresentationEditorComponent,
+    SectionEditorComponent
+  ],
+  providers: [
+    MarkdownPipe
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule {}
+export class AppModule { }
