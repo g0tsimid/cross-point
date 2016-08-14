@@ -9,6 +9,7 @@ import '@angular/router';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap'
 import 'marked';
 // RxJS
 import 'rxjs';
