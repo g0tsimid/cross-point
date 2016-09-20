@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SectionEditorComponent } from './section-editor.component';
 import { Presentation, PresentationSection } from '../shared'
 
 @Component({
-  selector: 'cp-editor',
-  templateUrl: 'presentation-editor.component.html',
-  directives: [SectionEditorComponent]
+  selector: 'my-editor',
+  templateUrl: 'presentation-editor.component.html'
 })
 export class PresentationEditorComponent implements OnInit {
   constructor() { 

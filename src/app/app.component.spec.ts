@@ -1,16 +1,12 @@
-import {
-  inject, addProviders
-} from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { AppModule } from './app.module';
 describe('App', () => {
   beforeEach(() => {
-    addProviders([
-      AppComponent
-    ])
+    TestBed.configureTestingModule({ imports: [AppModule]});
   });
-  it ('should work', inject([AppComponent], (app: AppComponent) => {
-    // Add real test here
-    expect(2).toBe(2);
-  }));
+  it ('should work', () => {
+    let fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
+  });
 });

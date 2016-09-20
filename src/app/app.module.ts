@@ -1,13 +1,19 @@
-import { NgModule }       from '@angular/core';
-import { BrowserModule  } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { AppComponent }   from './app.component';
-import { routing } from './app.routing';
+import { AppComponent } from './app.component';
+import {
+  routing,
+  appRoutingProviders
+} from './app.routing';
 import { HomeComponent } from './home';
-import { PresentationEditorComponent, SectionEditorComponent } from './presentation';
-import { MarkdownPipe, NavComponent } from './shared'
-
+import { NavComponent } from './shared/nav'
+import { MarkdownPipe } from './shared/markdown'
+import {
+  PresentationEditorComponent,
+  SectionEditorComponent
+} from './presentation';
 
 @NgModule({
   imports: [
@@ -18,13 +24,14 @@ import { MarkdownPipe, NavComponent } from './shared'
   declarations: [
     AppComponent,
     HomeComponent,
-    MarkdownPipe,
     NavComponent,
     PresentationEditorComponent,
-    SectionEditorComponent
+    SectionEditorComponent,
+    MarkdownPipe
   ],
-  bootstrap: [
-    AppComponent
-  ]
+  providers: [
+      
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
