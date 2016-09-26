@@ -8,26 +8,20 @@ import {
   appRoutingProviders
 } from './app.routing';
 import { HomeComponent } from './home';
+import { PresentationModule } from './presentation';
 import { NavComponent } from './shared/nav'
-import { MarkdownPipe } from './shared/markdown'
-import {
-  PresentationEditorComponent,
-  SectionEditorComponent
-} from './presentation';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    PresentationModule
   ],
   declarations: [
     AppComponent,
     HomeComponent,
-    NavComponent,
-    PresentationEditorComponent,
-    SectionEditorComponent,
-    MarkdownPipe
+    NavComponent
   ],
   providers: [
       

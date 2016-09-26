@@ -1,19 +1,13 @@
-import { APP_BASE_HREF } from '@angular/common';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home';
-import { PresentationEditorComponent } from './presentation';
 
 const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
     component: HomeComponent
-  },
-  {
-    path: 'presentation/new',
-    component: PresentationEditorComponent
   }
 ];
 

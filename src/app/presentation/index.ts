@@ -1,2 +1,1 @@
-export * from './presentation-editor';
-export * from './shared';
+export * from './presentation.module';
