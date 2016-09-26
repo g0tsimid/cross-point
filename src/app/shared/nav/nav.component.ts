@@ -1,3 +1,4 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

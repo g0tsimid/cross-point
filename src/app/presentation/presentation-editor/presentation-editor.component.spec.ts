@@ -1,8 +1,22 @@
 import { TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+
 import { PresentationEditorComponent } from './presentation-editor.component';
+import { SectionEditorComponent } from './section-editor.component';
+import { MarkdownPipe } from '../../shared/markdown';
+
 describe('Editor', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({ declarations: [PresentationEditorComponent]});
+    TestBed.configureTestingModule({
+      imports: [
+        FormsModule
+      ],
+      declarations: [
+        PresentationEditorComponent,
+        SectionEditorComponent,
+        MarkdownPipe
+      ]
+    });
   });
   it('displays an empty presentation when no presentation is provided', () => {
     let fixture = TestBed.createComponent(PresentationEditorComponent);
