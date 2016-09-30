@@ -14,7 +14,7 @@ export class PresentationEditorComponent implements OnInit {
   selectedSection: PresentationSection
 
   onAddSection() {
-    this.selectedSection = this.presentation.addSection();
+    this.selectedSection = this.presentation.addSection({});
   }
 
   ngOnInit() { }

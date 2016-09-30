@@ -17,10 +17,11 @@ export class Presentation {
   /**
    * Add a new section to the presentation.
    */
-  addSection() {
-    const section = new PresentationSection();
+  addSection({i, section} : { i?: number, section?: PresentationSection}) {
+    i = i != null ? i : this.sections.length;
+    section = section != null ? section : new PresentationSection();
     section.sortIndex = this.sections.reduce((max, section) => Math.max(max, section.sortIndex), 0) + 1;
-    this.sections.push(section)
+    this.sections.splice(i, 0, section);
     return section;
   }
 }
