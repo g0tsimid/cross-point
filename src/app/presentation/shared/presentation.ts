@@ -20,8 +20,8 @@ export class Presentation {
    */
   addSection(contentType: ContentType) : PresentationSection {
     const section = new PresentationSection(contentType);
-    section.sortIndex = this.sections.reduce((max, section) => Math.max(max, section.sortIndex), 0) + 1;
-    this.sections.push(section)
+    this.sections.push(section);
+    section.sortIndex = this.sections.length;
     return section;
   }
 }
