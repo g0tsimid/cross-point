@@ -1,0 +1,21 @@
+.add-section-button {
+  border: none;
+  background: #4670eb;
+  padding: 2em;
+  margin: 5px 0;
+  color: #EEF;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  text-align: center;
+  border-radius: 5px;
+  width: 24%;
+  vertical-align: top;
+}
+
+.add-section-button:hover {
+  background: #5379e9;
+}
+
+.add-section-button .glyphicon {
+  font-size: 28px;
+}

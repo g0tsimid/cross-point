@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PresentationSection } from '../shared';
+import { PresentationSection, ContentType } from '../shared';
 
 @Component({
   selector: 'my-section-editor',
@@ -9,6 +9,7 @@ export class SectionEditorComponent implements OnInit {
   constructor() { }
 
   @Input() section : PresentationSection
+  ContentType = ContentType
   isEditing: boolean = false;
 
   ngOnInit() { }

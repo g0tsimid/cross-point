@@ -1,4 +1,5 @@
 import { PresentationSection } from './presentation-section';
+import { ContentType } from './content';
 
 /**
  * A presentation that has any visual aids such as images, code samples,
@@ -17,8 +18,8 @@ export class Presentation {
   /**
    * Add a new section to the presentation.
    */
-  addSection() {
-    const section = new PresentationSection();
+  addSection(contentType: ContentType) : PresentationSection {
+    const section = new PresentationSection(contentType);
     section.sortIndex = this.sections.reduce((max, section) => Math.max(max, section.sortIndex), 0) + 1;
     this.sections.push(section)
     return section;
