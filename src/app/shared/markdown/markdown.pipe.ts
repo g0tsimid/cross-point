@@ -8,7 +8,7 @@ import * as marked from "marked";
 export class MarkdownPipe implements PipeTransform {
   transform(markdown: string): string {
     return marked(markdown || "", {
-      highlight: function (code: string, lang: string, callback?: Function): string {
+      highlight: function (code: string, lang: string): string {
         return hljs.highlightAuto(code).value;
       }
     });
