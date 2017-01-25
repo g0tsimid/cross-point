@@ -12,3 +12,4 @@ import 'rxjs';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap'
+import 'ace-builds/src/ace'

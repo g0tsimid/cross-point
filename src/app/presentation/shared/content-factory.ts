@@ -7,6 +7,9 @@ import {
   ContentType
 } from './content';
 
+/**
+ * A factory that creates a piece of content with the given type.
+ */
 export default class ContentFactory {
   static createContent(contentType: ContentType): Content {
     switch (contentType) {
