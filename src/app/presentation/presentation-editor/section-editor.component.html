@@ -1,7 +1,7 @@
-<h4>Section</h4>
 <div class="presentation-section-editor">
 	<div [ngSwitch]="section.articleContent.contentType">
 		<div *ngSwitchCase="ContentType.WysiwygMarkup">
+      <h4>Rich Text</h4>
 			<div *ngIf="!isEditing">
 				<div class="form-group">
 					<label>Text</label>
@@ -23,6 +23,15 @@
 			</div>
 		</div>
 		<my-code-editor *ngSwitchCase="ContentType.Code">
+      <h4>Code Editor </h4>
     </my-code-editor>
+    <div *ngSwitchCase="ContentType.CodeDiff">
+      <h4>Diff</h4>
+    </div>
 	</div>
+</div>
+<div class="btn-toolbar">
+  <div class="btn-group">
+
+  </div>
 </div>
