@@ -4,7 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { MarkdownPipe } from '../shared/markdown';
 import { presentationRouting } from './presentation.routing';
-import { PresentationEditorComponent, SectionEditorComponent } from './presentation-editor';
+import {
+  CodeEditorComponent,
+  PresentationEditorComponent,
+  SectionEditorComponent
+} from './presentation-editor';
 
 
 @NgModule({
@@ -14,6 +18,7 @@ import { PresentationEditorComponent, SectionEditorComponent } from './presentat
     presentationRouting
   ],
   declarations: [
+    CodeEditorComponent,
     PresentationEditorComponent,
     SectionEditorComponent,
     MarkdownPipe

@@ -10,7 +10,8 @@ export class SectionEditorComponent implements OnInit {
 
   @Input() section : PresentationSection
   ContentType = ContentType
-  isEditing: boolean = false;
+  isEditing: boolean = false
+  text: string
 
   ngOnInit() { }
 

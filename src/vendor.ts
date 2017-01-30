@@ -11,5 +11,3 @@ import 'rxjs';
 // You can import js, ts, css, sass, ...
 
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap'
-import 'ace-builds/src/ace'
