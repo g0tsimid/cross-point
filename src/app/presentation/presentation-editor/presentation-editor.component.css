@@ -19,29 +19,3 @@
 .add-section-button .glyphicon {
   font-size: 28px;
 }
-
-.left-fixed-viewport {
-  position: fixed;
-  overflow-y: visible;
-  width: 33%;
-  margin: 0 15px 15px 15px;
-  top: 89px;
-  bottom: 36px;
-  left: 0;
-  right: 0;
-}
-
-.left-fixed-viewport .viewport-container {
-  padding-top: 20px;
-}
-
-.viewport-container {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
-.viewport-container:hover {
-  overflow-y: auto;
-}

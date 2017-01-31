@@ -1,48 +1,47 @@
-<div class="container-fluid">
+<div class="container-fluid" id="page-viewport">
   <h1 class="page-header">CrossPoint <small>Editor</small></h1>
-  <div class="left-fixed-viewport">
-    <div class="viewport-container">
-      <h2>Article Editor</h2>
-      <div class="alert alert-info">
-        Add paragraphs to the article component of your presentation. You will then be able to create the visual aid that will accompany
-        the detailed article text.
+  <div id="content-viewport">
+    <div class="row">
+      <div class="col-md-4 col-viewport">
+        <h2>Article Editor</h2>
+        <div class="alert alert-info">
+          Add paragraphs to the article component of your presentation. You will then be able to create the visual aid that will accompany
+          the detailed article text.
+        </div>
+        <div class="form-group">
+          <label for="presentation-name">Name</label>
+          <input type="text" [(ngModel)]="presentation.name" class="form-control" />
+        </div>
+        <div *ngFor="let section of presentation.sections">
+          <h3>New Section</h3>
+          <my-section-editor [section]="section"></my-section-editor>
+        </div>
+        <div class="form-group">
+          <button class="add-section-button" (click)="onAddSection(ContentType.WysiwygMarkup)">
+            <span class="glyphicon glyphicon-text-size"></span>
+            <br />
+            Add Text Section
+          </button>
+          <button class="add-section-button" (click)="onAddSection(ContentType.Code)">
+            <span class="glyphicon glyphicon-console"></span>
+            <br />
+            Add Code Section
+          </button>
+          <button class="add-section-button" (click)="onAddSection(ContentType.CodeDiff)">
+            <span class="glyphicon glyphicon-compressed"></span>
+            <br />
+            Add Code Diff
+          </button>
+          <button class="add-section-button" (click)="onAddSection(ContentType.CodeFileList)">
+            <span class="glyphicon glyphicon-folder-open"></span>
+            <br />
+            Add Code List
+          </button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="presentation-name">Name</label>
-        <input type="text" [(ngModel)]="presentation.name" class="form-control" />
-      </div>
-      <div *ngFor="let section of presentation.sections">
-        <h3>New Section</h3>
-        <my-section-editor [section]="section"></my-section-editor>
-      </div>
-      <div class="form-group">
-        <button class="add-section-button" (click)="onAddSection(ContentType.WysiwygMarkup)">
-          <span class="glyphicon glyphicon-text-size"></span>
-          <br />
-          Add Text Section
-        </button>
-        <button class="add-section-button" (click)="onAddSection(ContentType.Code)">
-          <span class="glyphicon glyphicon-console"></span>
-          <br />
-          Add Code Section
-        </button>
-        <button class="add-section-button" (click)="onAddSection(ContentType.CodeDiff)">
-          <span class="glyphicon glyphicon-compressed"></span>
-          <br />
-          Add Code Diff
-        </button>
-        <button class="add-section-button" (click)="onAddSection(ContentType.CodeFileList)">
-          <span class="glyphicon glyphicon-folder-open"></span>
-          <br />
-          Add Code List
-        </button>
-      </div>
+      <div class="col-md-8">
+        <h2>Presentation Aid</h2>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8 col-md-offset-4">
-      <h2>Presentation Aid</h2>
     </div>
   </div>
 </div>
