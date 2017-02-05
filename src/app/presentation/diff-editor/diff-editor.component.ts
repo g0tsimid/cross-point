@@ -9,8 +9,6 @@ import {
 import 'brace/theme/twilight';
 import * as AceDiff from 'brace-diff'
 
-class AceDiffType extends AceDiff {}
-
 @Component({
   selector: "my-diff-editor",
   templateUrl: "./diff-editor.component.html",
@@ -20,7 +18,7 @@ export class DiffEditorComponent implements OnDestroy, OnInit {
   @Input() mode : string;
   @Input() leftCode : string = ""
   @Input() rightCode : string = ""
-  private aceDiff : AceDiffType // For some reason, referring to AceDiff directly doesn't work.
+  private aceDiff : AceDiff // For some reason, referring to AceDiff directly doesn't work.
 
   constructor(private elementRef : ElementRef) { }
 
