@@ -1,10 +1,10 @@
 import {
-  Content,
-  WysiwygMarkupContent,
   CodeContent,
   CodeDiffContent,
   CodeFileListContent,
-  ContentType
+  Content,
+  ContentType,
+  WysiwygMarkupContent
 } from './content';
 
 /**
@@ -21,6 +21,8 @@ export default class ContentFactory {
         return new CodeDiffContent();
       case ContentType.CodeFileList:
         return new CodeFileListContent();
+      default:
+        throw new Error("foo");
     }
   }
 }

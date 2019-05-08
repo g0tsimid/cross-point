@@ -1,0 +1,22 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "curly": true,
+    "member-access": [
+      false
+    ],
+    "member-ordering": [
+      false
+    ],
+    "no-empty": false,
+    "object-literal-sort-keys": false,
+    "typedef-whitespace": [
+      false
+    ]
+  },
+  "jsRules": {
+    "curly": true
+  },
+  "rulesDirectory": [
+  ]
+}
